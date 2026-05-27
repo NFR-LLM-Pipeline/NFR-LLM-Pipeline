@@ -1,0 +1,1163 @@
+{
+  "config": {
+    "data_path": "data\\nfr.csv",
+    "pilot_projects": [
+      "6",
+      "9"
+    ],
+    "prompt_variants": [
+      "V1",
+      "V2",
+      "V3"
+    ],
+    "macro_f1_labels": [
+      "performance",
+      "security",
+      "maintainability"
+    ]
+  },
+  "pooled_projects_6_9": {
+    "V1": {
+      "nfr_f1": 0.8712871287128713,
+      "gold_macro_f1": 0.7611721611721612,
+      "end_to_end_macro_f1": 0.6837606837606837,
+      "identification": {
+        "metrics": {
+          "NFR": {
+            "precision": 0.9565217391304348,
+            "recall": 0.8,
+            "f1": 0.8712871287128713
+          },
+          "FR": {
+            "precision": 0.7884615384615384,
+            "recall": 0.9534883720930233,
+            "f1": 0.8631578947368421
+          }
+        },
+        "confusion_matrix": {
+          "NFR": {
+            "NFR": 44,
+            "FR": 11
+          },
+          "FR": {
+            "NFR": 2,
+            "FR": 41
+          }
+        },
+        "n_samples": 98,
+        "n_nfr": 55,
+        "n_fr": 43,
+        "no_fr_in_project": false,
+        "missing_responses": 0,
+        "missing_ids": []
+      },
+      "classification_gold": {
+        "metrics": {
+          "performance": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692307692307693
+          },
+          "security": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8000000000000002
+          },
+          "maintainability": {
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          }
+        },
+        "confusion_matrix": {
+          "performance": {
+            "performance": 5,
+            "security": 0,
+            "maintainability": 0,
+            "other": 0
+          },
+          "security": {
+            "performance": 0,
+            "security": 4,
+            "maintainability": 0,
+            "other": 1
+          },
+          "maintainability": {
+            "performance": 0,
+            "security": 0,
+            "maintainability": 5,
+            "other": 0
+          },
+          "other": {
+            "performance": 3,
+            "security": 1,
+            "maintainability": 4,
+            "other": 32
+          }
+        },
+        "other_analysis": {
+          "predicted_other_count": 33,
+          "true_other_count": 40,
+          "target_confused_as_other": {
+            "security": 1
+          },
+          "other_confused_as_target": {
+            "performance": 3,
+            "maintainability": 4,
+            "security": 1
+          }
+        },
+        "n_samples": 55,
+        "missing_responses": 0,
+        "missing_ids": []
+      },
+      "pipeline": {
+        "identification": {
+          "metrics": {
+            "NFR": {
+              "precision": 0.9565217391304348,
+              "recall": 0.8,
+              "f1": 0.8712871287128713
+            },
+            "FR": {
+              "precision": 0.7884615384615384,
+              "recall": 0.9534883720930233,
+              "f1": 0.8631578947368421
+            }
+          },
+          "confusion_matrix": {
+            "NFR": {
+              "NFR": 44,
+              "FR": 11
+            },
+            "FR": {
+              "NFR": 2,
+              "FR": 41
+            }
+          },
+          "n_samples": 98,
+          "n_nfr": 55,
+          "n_fr": 43,
+          "no_fr_in_project": false,
+          "missing_responses": 0,
+          "missing_ids": []
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 0.5,
+              "recall": 0.8,
+              "f1": 0.6153846153846154
+            },
+            "security": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666665
+            },
+            "maintainability": {
+              "precision": 0.625,
+              "recall": 1.0,
+              "f1": 0.7692307692307693
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 4,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 1
+            },
+            "security": {
+              "performance": 0,
+              "security": 3,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 2
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 5,
+              "other": 0,
+              "F": 0,
+              "_missed": 0
+            },
+            "other": {
+              "performance": 4,
+              "security": 1,
+              "maintainability": 3,
+              "other": 24,
+              "F": 0,
+              "_missed": 8
+            },
+            "F": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 2,
+              "F": 0,
+              "_missed": 0
+            },
+            "_missed": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 0
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 26,
+            "true_other_count": 40,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {
+              "performance": 4,
+              "maintainability": 3,
+              "security": 1
+            }
+          },
+          "n_samples": 57
+        },
+        "error_breakdown": {
+          "total_gold_nfrs": 55,
+          "correctly_identified": 44,
+          "missed_in_identification": 11,
+          "missed_nfr_ids": [
+            "R279",
+            "R281",
+            "R287",
+            "R288",
+            "R291",
+            "R295",
+            "R302",
+            "R313",
+            "R316",
+            "R317",
+            "R469"
+          ],
+          "unclassified_after_identification": 0,
+          "unclassified_nfr_ids": [],
+          "false_positives": [
+            {
+              "req_id": "R348",
+              "true_class": "F",
+              "predicted_category": "other"
+            },
+            {
+              "req_id": "R349",
+              "true_class": "F",
+              "predicted_category": "other"
+            }
+          ],
+          "false_positive_count": 2
+        }
+      },
+      "missing_files": []
+    },
+    "V2": {
+      "nfr_f1": 0.8846153846153846,
+      "gold_macro_f1": 0.8189033189033189,
+      "end_to_end_macro_f1": 0.7424242424242423,
+      "identification": {
+        "metrics": {
+          "NFR": {
+            "precision": 0.9387755102040817,
+            "recall": 0.8363636363636363,
+            "f1": 0.8846153846153846
+          },
+          "FR": {
+            "precision": 0.8163265306122449,
+            "recall": 0.9302325581395349,
+            "f1": 0.8695652173913043
+          }
+        },
+        "confusion_matrix": {
+          "NFR": {
+            "NFR": 46,
+            "FR": 9
+          },
+          "FR": {
+            "NFR": 3,
+            "FR": 40
+          }
+        },
+        "n_samples": 98,
+        "n_nfr": 55,
+        "n_fr": 43,
+        "no_fr_in_project": false,
+        "missing_responses": 0,
+        "missing_ids": []
+      },
+      "classification_gold": {
+        "metrics": {
+          "performance": {
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          },
+          "security": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091
+          },
+          "maintainability": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333333
+          }
+        },
+        "confusion_matrix": {
+          "performance": {
+            "performance": 5,
+            "security": 0,
+            "maintainability": 0,
+            "other": 0
+          },
+          "security": {
+            "performance": 0,
+            "security": 5,
+            "maintainability": 0,
+            "other": 0
+          },
+          "maintainability": {
+            "performance": 0,
+            "security": 0,
+            "maintainability": 5,
+            "other": 0
+          },
+          "other": {
+            "performance": 4,
+            "security": 1,
+            "maintainability": 2,
+            "other": 33
+          }
+        },
+        "other_analysis": {
+          "predicted_other_count": 33,
+          "true_other_count": 40,
+          "target_confused_as_other": {},
+          "other_confused_as_target": {
+            "performance": 4,
+            "maintainability": 2,
+            "security": 1
+          }
+        },
+        "n_samples": 55,
+        "missing_responses": 0,
+        "missing_ids": []
+      },
+      "pipeline": {
+        "identification": {
+          "metrics": {
+            "NFR": {
+              "precision": 0.94,
+              "recall": 0.8545454545454545,
+              "f1": 0.8952380952380952
+            },
+            "FR": {
+              "precision": 0.8333333333333334,
+              "recall": 0.9302325581395349,
+              "f1": 0.8791208791208791
+            }
+          },
+          "confusion_matrix": {
+            "NFR": {
+              "NFR": 47,
+              "FR": 8
+            },
+            "FR": {
+              "NFR": 3,
+              "FR": 40
+            }
+          },
+          "n_samples": 98,
+          "n_nfr": 55,
+          "n_fr": 43,
+          "no_fr_in_project": false,
+          "missing_responses": 0,
+          "missing_ids": []
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 0.5714285714285714,
+              "recall": 0.8,
+              "f1": 0.6666666666666666
+            },
+            "security": {
+              "precision": 0.6666666666666666,
+              "recall": 0.8,
+              "f1": 0.7272727272727272
+            },
+            "maintainability": {
+              "precision": 0.7142857142857143,
+              "recall": 1.0,
+              "f1": 0.8333333333333333
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 4,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 1
+            },
+            "security": {
+              "performance": 0,
+              "security": 4,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 1
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 5,
+              "other": 0,
+              "F": 0,
+              "_missed": 0
+            },
+            "other": {
+              "performance": 3,
+              "security": 1,
+              "maintainability": 2,
+              "other": 28,
+              "F": 0,
+              "_missed": 6
+            },
+            "F": {
+              "performance": 0,
+              "security": 1,
+              "maintainability": 0,
+              "other": 2,
+              "F": 0,
+              "_missed": 0
+            },
+            "_missed": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 0
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 30,
+            "true_other_count": 40,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {
+              "performance": 3,
+              "maintainability": 2,
+              "security": 1
+            }
+          },
+          "n_samples": 58
+        },
+        "error_breakdown": {
+          "total_gold_nfrs": 55,
+          "correctly_identified": 47,
+          "missed_in_identification": 8,
+          "missed_nfr_ids": [
+            "R279",
+            "R281",
+            "R287",
+            "R288",
+            "R291",
+            "R302",
+            "R316",
+            "R469"
+          ],
+          "unclassified_after_identification": 0,
+          "unclassified_nfr_ids": [],
+          "false_positives": [
+            {
+              "req_id": "R348",
+              "true_class": "F",
+              "predicted_category": "other"
+            },
+            {
+              "req_id": "R349",
+              "true_class": "F",
+              "predicted_category": "other"
+            },
+            {
+              "req_id": "R487",
+              "true_class": "F",
+              "predicted_category": "security"
+            }
+          ],
+          "false_positive_count": 3
+        }
+      },
+      "missing_files": []
+    },
+    "V3": {
+      "nfr_f1": 0.9056603773584905,
+      "gold_macro_f1": 0.8372183372183372,
+      "end_to_end_macro_f1": 0.7424242424242423,
+      "identification": {
+        "metrics": {
+          "NFR": {
+            "precision": 0.9411764705882353,
+            "recall": 0.8727272727272727,
+            "f1": 0.9056603773584905
+          },
+          "FR": {
+            "precision": 0.851063829787234,
+            "recall": 0.9302325581395349,
+            "f1": 0.888888888888889
+          }
+        },
+        "confusion_matrix": {
+          "NFR": {
+            "NFR": 48,
+            "FR": 7
+          },
+          "FR": {
+            "NFR": 3,
+            "FR": 40
+          }
+        },
+        "n_samples": 98,
+        "n_nfr": 55,
+        "n_fr": 43,
+        "no_fr_in_project": false,
+        "missing_responses": 0,
+        "missing_ids": []
+      },
+      "classification_gold": {
+        "metrics": {
+          "performance": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692307692307693
+          },
+          "security": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091
+          },
+          "maintainability": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333333
+          }
+        },
+        "confusion_matrix": {
+          "performance": {
+            "performance": 5,
+            "security": 0,
+            "maintainability": 0,
+            "other": 0
+          },
+          "security": {
+            "performance": 0,
+            "security": 5,
+            "maintainability": 0,
+            "other": 0
+          },
+          "maintainability": {
+            "performance": 0,
+            "security": 0,
+            "maintainability": 5,
+            "other": 0
+          },
+          "other": {
+            "performance": 3,
+            "security": 1,
+            "maintainability": 2,
+            "other": 34
+          }
+        },
+        "other_analysis": {
+          "predicted_other_count": 34,
+          "true_other_count": 40,
+          "target_confused_as_other": {},
+          "other_confused_as_target": {
+            "maintainability": 2,
+            "performance": 3,
+            "security": 1
+          }
+        },
+        "n_samples": 55,
+        "missing_responses": 0,
+        "missing_ids": []
+      },
+      "pipeline": {
+        "identification": {
+          "metrics": {
+            "NFR": {
+              "precision": 0.94,
+              "recall": 0.8545454545454545,
+              "f1": 0.8952380952380952
+            },
+            "FR": {
+              "precision": 0.8333333333333334,
+              "recall": 0.9302325581395349,
+              "f1": 0.8791208791208791
+            }
+          },
+          "confusion_matrix": {
+            "NFR": {
+              "NFR": 47,
+              "FR": 8
+            },
+            "FR": {
+              "NFR": 3,
+              "FR": 40
+            }
+          },
+          "n_samples": 98,
+          "n_nfr": 55,
+          "n_fr": 43,
+          "no_fr_in_project": false,
+          "missing_responses": 0,
+          "missing_ids": []
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 0.5714285714285714,
+              "recall": 0.8,
+              "f1": 0.6666666666666666
+            },
+            "security": {
+              "precision": 0.6666666666666666,
+              "recall": 0.8,
+              "f1": 0.7272727272727272
+            },
+            "maintainability": {
+              "precision": 0.7142857142857143,
+              "recall": 1.0,
+              "f1": 0.8333333333333333
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 4,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 1
+            },
+            "security": {
+              "performance": 0,
+              "security": 4,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 1
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 5,
+              "other": 0,
+              "F": 0,
+              "_missed": 0
+            },
+            "other": {
+              "performance": 3,
+              "security": 1,
+              "maintainability": 2,
+              "other": 28,
+              "F": 0,
+              "_missed": 6
+            },
+            "F": {
+              "performance": 0,
+              "security": 1,
+              "maintainability": 0,
+              "other": 2,
+              "F": 0,
+              "_missed": 0
+            },
+            "_missed": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0,
+              "F": 0,
+              "_missed": 0
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 30,
+            "true_other_count": 40,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {
+              "maintainability": 2,
+              "performance": 3,
+              "security": 1
+            }
+          },
+          "n_samples": 58
+        },
+        "error_breakdown": {
+          "total_gold_nfrs": 55,
+          "correctly_identified": 47,
+          "missed_in_identification": 8,
+          "missed_nfr_ids": [
+            "R279",
+            "R281",
+            "R287",
+            "R288",
+            "R291",
+            "R302",
+            "R316",
+            "R469"
+          ],
+          "unclassified_after_identification": 0,
+          "unclassified_nfr_ids": [],
+          "false_positives": [
+            {
+              "req_id": "R348",
+              "true_class": "F",
+              "predicted_category": "other"
+            },
+            {
+              "req_id": "R349",
+              "true_class": "F",
+              "predicted_category": "other"
+            },
+            {
+              "req_id": "R487",
+              "true_class": "F",
+              "predicted_category": "security"
+            }
+          ],
+          "false_positive_count": 3
+        }
+      },
+      "missing_files": []
+    }
+  },
+  "project_level_gold_classification_f1": {
+    "6": {
+      "V1": {
+        "f1": {
+          "performance": 0.4,
+          "security": 0.8000000000000002,
+          "maintainability": 0.7272727272727273
+        },
+        "support": {
+          "performance": 1,
+          "security": 5,
+          "maintainability": 4
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4
+            },
+            "security": {
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "maintainability": {
+              "precision": 0.5714285714285714,
+              "recall": 1.0,
+              "f1": 0.7272727272727273
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 1,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "security": {
+              "performance": 0,
+              "security": 4,
+              "maintainability": 0,
+              "other": 1
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 4,
+              "other": 0
+            },
+            "other": {
+              "performance": 3,
+              "security": 1,
+              "maintainability": 3,
+              "other": 30
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 31,
+            "true_other_count": 37,
+            "target_confused_as_other": {
+              "security": 1
+            },
+            "other_confused_as_target": {
+              "performance": 3,
+              "maintainability": 3,
+              "security": 1
+            }
+          },
+          "n_samples": 47,
+          "missing_responses": 0,
+          "missing_ids": []
+        }
+      },
+      "V2": {
+        "f1": {
+          "performance": 0.33333333333333337,
+          "security": 0.9090909090909091,
+          "maintainability": 0.8
+        },
+        "support": {
+          "performance": 1,
+          "security": 5,
+          "maintainability": 4
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 0.2,
+              "recall": 1.0,
+              "f1": 0.33333333333333337
+            },
+            "security": {
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "maintainability": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 1,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "security": {
+              "performance": 0,
+              "security": 5,
+              "maintainability": 0,
+              "other": 0
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 4,
+              "other": 0
+            },
+            "other": {
+              "performance": 4,
+              "security": 1,
+              "maintainability": 2,
+              "other": 30
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 30,
+            "true_other_count": 37,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {
+              "performance": 4,
+              "maintainability": 2,
+              "security": 1
+            }
+          },
+          "n_samples": 47,
+          "missing_responses": 0,
+          "missing_ids": []
+        }
+      },
+      "V3": {
+        "f1": {
+          "performance": 0.4,
+          "security": 0.9090909090909091,
+          "maintainability": 0.8
+        },
+        "support": {
+          "performance": 1,
+          "security": 5,
+          "maintainability": 4
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4
+            },
+            "security": {
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "maintainability": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 1,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "security": {
+              "performance": 0,
+              "security": 5,
+              "maintainability": 0,
+              "other": 0
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 4,
+              "other": 0
+            },
+            "other": {
+              "performance": 3,
+              "security": 1,
+              "maintainability": 2,
+              "other": 31
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 31,
+            "true_other_count": 37,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {
+              "maintainability": 2,
+              "performance": 3,
+              "security": 1
+            }
+          },
+          "n_samples": 47,
+          "missing_responses": 0,
+          "missing_ids": []
+        }
+      }
+    },
+    "9": {
+      "V1": {
+        "f1": {
+          "performance": 1.0,
+          "security": 0.0,
+          "maintainability": 0.6666666666666666
+        },
+        "support": {
+          "performance": 4,
+          "security": 0,
+          "maintainability": 1
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "security": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "maintainability": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 4,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "security": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 1,
+              "other": 0
+            },
+            "other": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 1,
+              "other": 2
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 2,
+            "true_other_count": 3,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {
+              "maintainability": 1
+            }
+          },
+          "n_samples": 8,
+          "missing_responses": 0,
+          "missing_ids": []
+        }
+      },
+      "V2": {
+        "f1": {
+          "performance": 1.0,
+          "security": 0.0,
+          "maintainability": 1.0
+        },
+        "support": {
+          "performance": 4,
+          "security": 0,
+          "maintainability": 1
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "security": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "maintainability": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 4,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "security": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 1,
+              "other": 0
+            },
+            "other": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 3
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 3,
+            "true_other_count": 3,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {}
+          },
+          "n_samples": 8,
+          "missing_responses": 0,
+          "missing_ids": []
+        }
+      },
+      "V3": {
+        "f1": {
+          "performance": 1.0,
+          "security": 0.0,
+          "maintainability": 1.0
+        },
+        "support": {
+          "performance": 4,
+          "security": 0,
+          "maintainability": 1
+        },
+        "classification": {
+          "metrics": {
+            "performance": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "security": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "maintainability": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "confusion_matrix": {
+            "performance": {
+              "performance": 4,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "security": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 0
+            },
+            "maintainability": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 1,
+              "other": 0
+            },
+            "other": {
+              "performance": 0,
+              "security": 0,
+              "maintainability": 0,
+              "other": 3
+            }
+          },
+          "other_analysis": {
+            "predicted_other_count": 3,
+            "true_other_count": 3,
+            "target_confused_as_other": {},
+            "other_confused_as_target": {}
+          },
+          "n_samples": 8,
+          "missing_responses": 0,
+          "missing_ids": []
+        }
+      }
+    }
+  },
+  "missing_files": []
+}

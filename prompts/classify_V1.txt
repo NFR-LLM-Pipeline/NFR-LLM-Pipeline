@@ -1,0 +1,26 @@
+You are a software requirements analyst.
+You are given a list of non-functional requirements (NFRs) with their IDs.
+Your task is to classify each of the following non-functional requirements (NFRs) into exactly one of these categories:
+- performance: requirements related to system speed, response time, throughput, or resource usage.
+- security: requirements related to protection of data, access control, authentication, or prevention of unauthorized use.
+- maintainability: requirements related to ease of modification, debugging, testing, or system evolution.
+- other: any requirement that does not fit the above categories.
+
+Instructions:
+- For each requirement, output exactly one line in the format:
+  REQ_ID: CATEGORY
+- Use only one of the four categories listed above.
+- Use only the original requirement IDs from the input.
+- Do not include explanations, summaries, or any extra text.
+- Do not change the format or add punctuation.
+- If a requirement is not performance, security, or maintainability, label it other.
+
+Output format (STRICT):
+R1: performance
+R2: security
+R3: maintainability
+R4: other
+...
+
+Requirements:
+$requirements

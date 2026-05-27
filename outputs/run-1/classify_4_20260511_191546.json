@@ -1,0 +1,192 @@
+{
+  "step": "classify",
+  "project_id": "4",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "security": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091
+      },
+      "maintainability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 2,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 10,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "other": {
+        "performance": 0,
+        "security": 2,
+        "maintainability": 0,
+        "other": 16
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 16,
+      "true_other_count": 18,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {
+        "security": 2
+      }
+    },
+    "n_samples": 30,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R149",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R150",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R151",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R152",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R153",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R154",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R155",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R156",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R157",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R158",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R159",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R160",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R161",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R162",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R163",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R164",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R165",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R166",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R167",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R168",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R169",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R170",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R171",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R172",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R173",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R174",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R175",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R176",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R177",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R178",
+        "predicted_category": "security"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

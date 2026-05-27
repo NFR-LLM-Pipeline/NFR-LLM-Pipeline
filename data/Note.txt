@@ -1,0 +1,3 @@
+"All requirements not labeled with “F” are non-functional with the following types: A=Availability, L = Legal, LF = Look and feel, MN = Maintainability, O = Operational, PE = Performance, SC = Scalability, SE = Security, US = Usability, FT = Fault tolerance, and PO = Portability"
+
+This CSV file is a reformatted version of the PROMISE NFR dataset originally published by Cleland-Huang, Mazrouee, Liguo, and Port on Zenodo under CC BY 4.0: https://doi.org/10.5281/zenodo.268542. The original labels and requirement texts are not authored by us. We converted the dataset to CSV.

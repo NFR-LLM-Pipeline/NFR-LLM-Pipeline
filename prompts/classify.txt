@@ -1,0 +1,73 @@
+You are a software requirements analyst.
+You are given a list of NON-FUNCTIONAL requirements (NFRs).
+
+Your task is to classify each requirement into exactly ONE of the following categories:
+
+performance
+security
+maintainability
+other
+
+Definitions:
+
+Performance:
+
+Concerns measurable runtime behavior of the system, such as response time, latency, throughput, processing time, execution time, resource usage, runtime efficiency, synchronization frequency, or active simultaneous use.
+Typical aspects: response time, latency, throughput, processing speed, execution time, resource consumption, runtime efficiency, synchronization within a time interval, processing duration, or the system’s ability to support active simultaneous work.
+Classify a requirement as performance when its primary concern is how fast, how often, or under what runtime load the system performs an operation.
+Classify as performance when the requirement clearly describes response time, processing time, synchronization time/frequency, throughput, runtime delay, or active simultaneous use of the system.
+
+Security:
+
+Concerns access control, authentication, authorization, data protection, confidentiality, integrity, privacy, auditability, or prevention of unauthorized actions.
+Typical aspects: encryption, login, permissions, authorization, access control, confidentiality, privacy, integrity, audit trails, security-relevant logging, prevention of unauthorized access, protection from invalid or corrupted data, or protection against malicious actions.
+Classify a requirement as security when its primary concern is protecting data, controlling access, preventing unauthorized use, preserving confidentiality, preserving integrity, preventing data corruption, validating data to protect correctness, or keeping audit/security records.
+
+Maintainability:
+
+Concerns modifiability, configurability, extensibility, code quality, ease of updates, ease of maintenance, debugging, documentation, releases, upgrades, scheduled maintenance, maintenance cost, adaptation to new technology, or system evolution.
+Typical aspects: easy to modify, configurable, extensible, modular design, coding best practices, documented, testable, maintainable over time, easy to update, easy to upgrade, version releases, scheduled maintenance, maintenance budget, support for future changes, or adaptation to new technology.
+Classify a requirement as maintainability when its primary concern is ease of modification, maintenance, extension, testing, debugging, documentation, updating, upgrading, release management, scheduled maintenance, adaptation to future changes, or system evolution.
+
+Other:
+
+Any NFR whose primary concern is something other than performance, security, or maintainability.
+Typical aspects include usability, accessibility, compatibility, portability, interoperability, legal constraints, user-interface quality, deployment, operating environments, localization, licensing, distribution, availability, reliability, fault tolerance, robustness, installation, platform constraints, general scalability, general capacity planning, number of stored items, number of supported customers, or general technology/platform constraints.
+Use other when the requirement describes a quality attribute or constraint that is not clearly one of the three target categories.
+
+Important guidelines:
+
+Choose the category that best matches the requirement's primary concern.
+If a requirement contains aspects of more than one category, choose the category that represents the main quality concern.
+When deciding between a target category and other, choose the target category only if the requirement clearly and primarily matches performance, security, or maintainability. Otherwise, choose other.
+Do not use other when the requirement clearly expresses one of the target concerns.
+
+Decision rule:
+
+Determine the requirement's primary NFR concern.
+Assign the category that best matches that concern.
+Use performance for measurable runtime speed, timing, processing, synchronization, throughput, or active simultaneous use.
+Use security for access control, data protection, confidentiality, integrity, auditability, or prevention of unauthorized or corrupting actions.
+Use maintainability for modification, maintenance, updates, upgrades, releases, scheduled maintenance, maintenance cost, documentation, testing, or system evolution.
+Use other when the primary concern is outside performance, security, and maintainability.
+
+Instructions:
+
+For each requirement, output exactly one line in the format:
+REQ_ID: CATEGORY
+
+Use only one of the four categories: performance, security, maintainability, other.
+Use only the original requirement IDs from the input.
+Do not include explanations, summaries, or any extra text.
+Do not change the format or add punctuation.
+
+Output format (STRICT):
+
+R1: performance
+R2: security
+R3: maintainability
+R4: other
+...
+
+Requirements:
+$requirements

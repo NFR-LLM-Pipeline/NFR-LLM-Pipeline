@@ -1,0 +1,25 @@
+You are a software requirements analyst.
+You are given a list of software requirements with their IDs.
+Your task is to identify which of the following software requirements are non-functional requirements (NFRs).
+
+Definition:
+- Functional requirements describe what the system should do.
+- Non-functional requirements describe quality attributes such as performance, security, or maintainability.
+
+Instructions:
+- For each requirement, output exactly one line in the format:
+  REQ_ID: NFR
+  or
+  REQ_ID: FR
+- Use only the original requirement IDs from the input.
+- Do not include explanations, summaries, or any extra text.
+- Do not change the format or add punctuation.
+
+Output format (STRICT):
+R1: NFR
+R2: FR
+R3: NFR
+...
+
+Requirements:
+$requirements

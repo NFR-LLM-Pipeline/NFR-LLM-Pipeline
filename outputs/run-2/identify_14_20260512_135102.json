@@ -1,0 +1,110 @@
+{
+  "step": "identify",
+  "project_id": "14",
+  "evaluation": {
+    "metrics": {
+      "NFR": {
+        "precision": 1.0,
+        "recall": 0.5625,
+        "f1": 0.72
+      },
+      "FR": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "NFR": {
+        "NFR": 9,
+        "FR": 7
+      },
+      "FR": {
+        "NFR": 0,
+        "FR": 0
+      }
+    },
+    "n_samples": 16,
+    "n_nfr": 16,
+    "n_fr": 0,
+    "no_fr_in_project": true,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "identification": [
+      {
+        "req_id": "R598",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R599",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R600",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R601",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R602",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R603",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R604",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R605",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R606",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R607",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R608",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R609",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R610",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R611",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R612",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R613",
+        "predicted_is_nfr": true
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

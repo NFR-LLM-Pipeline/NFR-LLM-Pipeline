@@ -1,0 +1,212 @@
+{
+  "step": "pipeline",
+  "project_id": "15",
+  "evaluation": {
+    "identification": {
+      "metrics": {
+        "NFR": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "FR": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "NFR": {
+          "NFR": 9,
+          "FR": 3
+        },
+        "FR": {
+          "NFR": 0,
+          "FR": 0
+        }
+      },
+      "n_samples": 12,
+      "n_nfr": 12,
+      "n_fr": 0,
+      "no_fr_in_project": true,
+      "missing_responses": 0,
+      "missing_ids": []
+    },
+    "classification": {
+      "metrics": {
+        "performance": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "security": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "maintainability": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "performance": {
+          "performance": 1,
+          "security": 0,
+          "maintainability": 0,
+          "other": 0,
+          "_missed": 0
+        },
+        "security": {
+          "performance": 0,
+          "security": 2,
+          "maintainability": 0,
+          "other": 0,
+          "_missed": 0
+        },
+        "maintainability": {
+          "performance": 0,
+          "security": 0,
+          "maintainability": 0,
+          "other": 0,
+          "_missed": 2
+        },
+        "other": {
+          "performance": 0,
+          "security": 0,
+          "maintainability": 0,
+          "other": 6,
+          "_missed": 1
+        },
+        "_missed": {
+          "performance": 0,
+          "security": 0,
+          "maintainability": 0,
+          "other": 0,
+          "_missed": 0
+        }
+      },
+      "other_analysis": {
+        "predicted_other_count": 6,
+        "true_other_count": 7,
+        "target_confused_as_other": {},
+        "other_confused_as_target": {}
+      },
+      "n_samples": 12
+    },
+    "error_breakdown": {
+      "total_gold_nfrs": 12,
+      "correctly_identified": 9,
+      "missed_in_identification": 3,
+      "missed_nfr_ids": [
+        "R617",
+        "R618",
+        "R619"
+      ],
+      "unclassified_after_identification": 0,
+      "unclassified_nfr_ids": [],
+      "false_positives": [],
+      "false_positive_count": 0
+    }
+  },
+  "predictions": {
+    "project_id": "15",
+    "identification": [
+      {
+        "req_id": "R614",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R615",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R616",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R617",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R618",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R619",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R620",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R621",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R622",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R623",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R624",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R625",
+        "predicted_is_nfr": true
+      }
+    ],
+    "classification": [
+      {
+        "req_id": "R614",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R615",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R616",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R620",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R621",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R622",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R623",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R624",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R625",
+        "predicted_category": "performance"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

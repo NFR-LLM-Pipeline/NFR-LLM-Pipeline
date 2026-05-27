@@ -1,0 +1,204 @@
+{
+  "step": "classify",
+  "project_id": "3",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "security": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "maintainability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 2,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 10,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "other": {
+        "performance": 2,
+        "security": 0,
+        "maintainability": 0,
+        "other": 19
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 19,
+      "true_other_count": 21,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {
+        "performance": 2
+      }
+    },
+    "n_samples": 33,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R69",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R70",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R71",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R72",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R73",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R74",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R75",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R76",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R77",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R78",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R79",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R80",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R81",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R82",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R83",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R84",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R85",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R86",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R87",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R88",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R89",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R90",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R91",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R92",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R93",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R94",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R95",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R96",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R97",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R98",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R99",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R100",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R101",
+        "predicted_category": "security"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

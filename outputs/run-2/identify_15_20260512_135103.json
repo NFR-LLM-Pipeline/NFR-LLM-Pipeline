@@ -1,0 +1,94 @@
+{
+  "step": "identify",
+  "project_id": "15",
+  "evaluation": {
+    "metrics": {
+      "NFR": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571
+      },
+      "FR": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "NFR": {
+        "NFR": 9,
+        "FR": 3
+      },
+      "FR": {
+        "NFR": 0,
+        "FR": 0
+      }
+    },
+    "n_samples": 12,
+    "n_nfr": 12,
+    "n_fr": 0,
+    "no_fr_in_project": true,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "identification": [
+      {
+        "req_id": "R614",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R615",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R616",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R617",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R618",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R619",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R620",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R621",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R622",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R623",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R624",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R625",
+        "predicted_is_nfr": true
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

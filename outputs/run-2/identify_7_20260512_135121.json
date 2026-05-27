@@ -1,0 +1,138 @@
+{
+  "step": "identify",
+  "project_id": "7",
+  "evaluation": {
+    "metrics": {
+      "NFR": {
+        "precision": 0.7777777777777778,
+        "recall": 0.875,
+        "f1": 0.823529411764706
+      },
+      "FR": {
+        "precision": 0.9285714285714286,
+        "recall": 0.8666666666666667,
+        "f1": 0.896551724137931
+      }
+    },
+    "confusion_matrix": {
+      "NFR": {
+        "NFR": 7,
+        "FR": 1
+      },
+      "FR": {
+        "NFR": 2,
+        "FR": 13
+      }
+    },
+    "n_samples": 23,
+    "n_nfr": 8,
+    "n_fr": 15,
+    "no_fr_in_project": false,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "identification": [
+      {
+        "req_id": "R351",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R352",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R353",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R354",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R355",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R356",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R357",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R358",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R359",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R360",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R361",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R362",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R363",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R364",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R365",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R366",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R367",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R368",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R369",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R370",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R371",
+        "predicted_is_nfr": true
+      },
+      {
+        "req_id": "R372",
+        "predicted_is_nfr": false
+      },
+      {
+        "req_id": "R373",
+        "predicted_is_nfr": false
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

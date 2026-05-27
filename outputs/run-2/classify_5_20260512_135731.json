@@ -1,0 +1,222 @@
+{
+  "step": "classify",
+  "project_id": "5",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 0.5714285714285714,
+        "recall": 1.0,
+        "f1": 0.7272727272727273
+      },
+      "security": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      },
+      "maintainability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 4,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 7,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "other": {
+        "performance": 3,
+        "security": 1,
+        "maintainability": 4,
+        "other": 18
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 18,
+      "true_other_count": 26,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {
+        "maintainability": 4,
+        "performance": 3,
+        "security": 1
+      }
+    },
+    "n_samples": 37,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R204",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R205",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R206",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R207",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R208",
+        "predicted_category": "maintainability"
+      },
+      {
+        "req_id": "R209",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R210",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R211",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R212",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R213",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R214",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R215",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R216",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R217",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R218",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R219",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R220",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R221",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R222",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R223",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R224",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R225",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R226",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R227",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R228",
+        "predicted_category": "maintainability"
+      },
+      {
+        "req_id": "R229",
+        "predicted_category": "maintainability"
+      },
+      {
+        "req_id": "R230",
+        "predicted_category": "maintainability"
+      },
+      {
+        "req_id": "R231",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R232",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R233",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R234",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R235",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R236",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R237",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R238",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R239",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R240",
+        "predicted_category": "other"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

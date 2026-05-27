@@ -1,0 +1,137 @@
+{
+  "step": "classify",
+  "project_id": "14",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "security": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "maintainability": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 1,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 2,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 2,
+        "other": 0
+      },
+      "other": {
+        "performance": 1,
+        "security": 1,
+        "maintainability": 0,
+        "other": 9
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 9,
+      "true_other_count": 11,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {
+        "performance": 1,
+        "security": 1
+      }
+    },
+    "n_samples": 16,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R598",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R599",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R600",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R601",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R602",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R603",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R604",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R605",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R606",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R607",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R608",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R609",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R610",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R611",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R612",
+        "predicted_category": "maintainability"
+      },
+      {
+        "req_id": "R613",
+        "predicted_category": "maintainability"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

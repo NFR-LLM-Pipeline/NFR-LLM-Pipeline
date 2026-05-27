@@ -1,0 +1,572 @@
+{
+  "config": {
+    "runs_dir": "outputs",
+    "data_path": "data\\nfr.csv",
+    "selected_projects": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "7",
+      "8",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "excluded_projects": [
+      "6",
+      "9"
+    ],
+    "pilot_projects": [
+      "6",
+      "9"
+    ],
+    "aggregation_method": "dataset-level per run, then mean \u00b1 sample standard deviation across runs",
+    "n_runs": 3,
+    "run_names": [
+      "run-1",
+      "run-2",
+      "run-3"
+    ],
+    "missing_files": []
+  },
+  "rqa_identification": {
+    "title": "RQa: NFR identification",
+    "nfr_metrics": {
+      "precision": {
+        "mean": 0.9528140611963073,
+        "std": 0.005448236914318855,
+        "per_run": [
+          0.9481481481481482,
+          0.9514925373134329,
+          0.9588014981273408
+        ]
+      },
+      "recall": {
+        "mean": 0.8116402116402117,
+        "std": 0.0018328579974273768,
+        "per_run": [
+          0.8126984126984127,
+          0.8095238095238095,
+          0.8126984126984127
+        ]
+      },
+      "f1": {
+        "mean": 0.8765747842970173,
+        "std": 0.002736624572725422,
+        "per_run": [
+          0.8752136752136752,
+          0.8747855917667239,
+          0.8797250859106529
+        ]
+      }
+    },
+    "fr_metrics_supplementary": {
+      "precision": {
+        "mean": 0.7706149023269647,
+        "std": 0.002374100618657248,
+        "per_run": [
+          0.7704280155642024,
+          0.7683397683397684,
+          0.7730769230769231
+        ]
+      },
+      "recall": {
+        "mean": 0.940251572327044,
+        "std": 0.007205307696471421,
+        "per_run": [
+          0.9339622641509434,
+          0.9386792452830188,
+          0.9481132075471698
+        ]
+      },
+      "f1": {
+        "mean": 0.8470184037120219,
+        "std": 0.004063438088686472,
+        "per_run": [
+          0.8443496801705757,
+          0.8450106157112526,
+          0.8516949152542372
+        ]
+      }
+    },
+    "sum_confusion_matrix": {
+      "FR": {
+        "FR": 598,
+        "NFR": 38
+      },
+      "NFR": {
+        "FR": 178,
+        "NFR": 767
+      }
+    },
+    "mean_confusion_matrix": {
+      "FR": {
+        "FR": 199.33333333333334,
+        "NFR": 12.666666666666666
+      },
+      "NFR": {
+        "FR": 59.333333333333336,
+        "NFR": 255.66666666666666
+      }
+    }
+  },
+  "rqb_classification_gold": {
+    "title": "RQb: Classification given gold NFRs",
+    "target_category_metrics": {
+      "performance": {
+        "precision": {
+          "mean": 0.7750554962997488,
+          "std": 0.019673899429910314,
+          "per_run": [
+            0.7580645161290323,
+            0.7966101694915254,
+            0.7704918032786885
+          ]
+        },
+        "recall": {
+          "mean": 0.9591836734693877,
+          "std": 0.0,
+          "per_run": [
+            0.9591836734693877,
+            0.9591836734693877,
+            0.9591836734693877
+          ]
+        },
+        "f1": {
+          "mean": 0.8572542239208905,
+          "std": 0.011993419586899132,
+          "per_run": [
+            0.8468468468468467,
+            0.8703703703703702,
+            0.8545454545454545
+          ]
+        }
+      },
+      "security": {
+        "precision": {
+          "mean": 0.9196442032262927,
+          "std": 0.007964352424370682,
+          "per_run": [
+            0.9104477611940298,
+            0.9242424242424242,
+            0.9242424242424242
+          ]
+        },
+        "recall": {
+          "mean": 1.0,
+          "std": 0.0,
+          "per_run": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "f1": {
+          "mean": 0.9581282808398951,
+          "std": 0.004332968309617,
+          "per_run": [
+            0.953125,
+            0.9606299212598425,
+            0.9606299212598425
+          ]
+        }
+      },
+      "maintainability": {
+        "precision": {
+          "mean": 0.5714285714285714,
+          "std": 0.0,
+          "per_run": [
+            0.5714285714285714,
+            0.5714285714285714,
+            0.5714285714285714
+          ]
+        },
+        "recall": {
+          "mean": 0.6666666666666666,
+          "std": 0.0,
+          "per_run": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        "f1": {
+          "mean": 0.6153846153846153,
+          "std": 0.0,
+          "per_run": [
+            0.6153846153846153,
+            0.6153846153846153,
+            0.6153846153846153
+          ]
+        }
+      }
+    },
+    "sum_confusion_matrix": {
+      "performance": {
+        "performance": 141,
+        "maintainability": 3,
+        "other": 0,
+        "security": 3
+      },
+      "maintainability": {
+        "performance": 3,
+        "maintainability": 24,
+        "other": 9,
+        "security": 0
+      },
+      "other": {
+        "performance": 38,
+        "maintainability": 15,
+        "other": 513,
+        "security": 13
+      },
+      "security": {
+        "performance": 0,
+        "maintainability": 0,
+        "other": 0,
+        "security": 183
+      }
+    },
+    "mean_confusion_matrix": {
+      "performance": {
+        "performance": 47.0,
+        "maintainability": 1.0,
+        "other": 0.0,
+        "security": 1.0
+      },
+      "maintainability": {
+        "performance": 1.0,
+        "maintainability": 8.0,
+        "other": 3.0,
+        "security": 0.0
+      },
+      "other": {
+        "performance": 12.666666666666666,
+        "maintainability": 5.0,
+        "other": 171.0,
+        "security": 4.333333333333333
+      },
+      "security": {
+        "performance": 0.0,
+        "maintainability": 0.0,
+        "other": 0.0,
+        "security": 61.0
+      }
+    }
+  },
+  "rqc_end_to_end_pipeline": {
+    "title": "RQc: Full two-step pipeline",
+    "identification_metrics": {
+      "nfr": {
+        "precision": {
+          "mean": 0.9589024579759845,
+          "std": 0.0003185552436067856,
+          "per_run": [
+            0.9588014981273408,
+            0.9586466165413534,
+            0.9592592592592593
+          ]
+        },
+        "recall": {
+          "mean": 0.8148148148148149,
+          "std": 0.006608463490368652,
+          "per_run": [
+            0.8126984126984127,
+            0.8095238095238095,
+            0.8222222222222222
+          ]
+        },
+        "f1": {
+          "mean": 0.8809973577580087,
+          "std": 0.003991671741387511,
+          "per_run": [
+            0.8797250859106529,
+            0.8777969018932874,
+            0.8854700854700855
+          ]
+        }
+      },
+      "fr_supplementary": {
+        "precision": {
+          "mean": 0.7750976776402779,
+          "std": 0.00624339514300943,
+          "per_run": [
+            0.7730769230769231,
+            0.7701149425287356,
+            0.7821011673151751
+          ]
+        },
+        "recall": {
+          "mean": 0.9481132075471698,
+          "std": 0.0,
+          "per_run": [
+            0.9481132075471698,
+            0.9481132075471698,
+            0.9481132075471698
+          ]
+        },
+        "f1": {
+          "mean": 0.852910688050617,
+          "std": 0.0037741227677043263,
+          "per_run": [
+            0.8516949152542372,
+            0.8498942917547568,
+            0.8571428571428571
+          ]
+        }
+      },
+      "sum_confusion_matrix": {
+        "FR": {
+          "FR": 603,
+          "NFR": 33
+        },
+        "NFR": {
+          "FR": 175,
+          "NFR": 770
+        }
+      },
+      "mean_confusion_matrix": {
+        "FR": {
+          "FR": 201.0,
+          "NFR": 11.0
+        },
+        "NFR": {
+          "FR": 58.333333333333336,
+          "NFR": 256.6666666666667
+        }
+      }
+    },
+    "target_category_metrics": {
+      "performance": {
+        "precision": {
+          "mean": 0.8170594837261503,
+          "std": 0.0019439403003018254,
+          "per_run": [
+            0.8148148148148148,
+            0.8181818181818182,
+            0.8181818181818182
+          ]
+        },
+        "recall": {
+          "mean": 0.9115646258503401,
+          "std": 0.011782658554890335,
+          "per_run": [
+            0.8979591836734694,
+            0.9183673469387755,
+            0.9183673469387755
+          ]
+        },
+        "f1": {
+          "mean": 0.8617127209360219,
+          "std": 0.0063599077449940575,
+          "per_run": [
+            0.8543689320388349,
+            0.8653846153846154,
+            0.8653846153846154
+          ]
+        }
+      },
+      "security": {
+        "precision": {
+          "mean": 0.8517520215633424,
+          "std": 0.004668600559484798,
+          "per_run": [
+            0.8490566037735849,
+            0.8490566037735849,
+            0.8571428571428571
+          ]
+        },
+        "recall": {
+          "mean": 0.7540983606557378,
+          "std": 0.028394275533915988,
+          "per_run": [
+            0.7377049180327869,
+            0.7377049180327869,
+            0.7868852459016393
+          ]
+        },
+        "f1": {
+          "mean": 0.7998200629779578,
+          "std": 0.017920453699543017,
+          "per_run": [
+            0.7894736842105263,
+            0.7894736842105263,
+            0.8205128205128205
+          ]
+        }
+      },
+      "maintainability": {
+        "precision": {
+          "mean": 0.5017094017094017,
+          "std": 0.03592794796065588,
+          "per_run": [
+            0.5384615384615384,
+            0.5,
+            0.4666666666666667
+          ]
+        },
+        "recall": {
+          "mean": 0.5833333333333334,
+          "std": 0.0,
+          "per_run": [
+            0.5833333333333334,
+            0.5833333333333334,
+            0.5833333333333334
+          ]
+        },
+        "f1": {
+          "mean": 0.5389933523266857,
+          "std": 0.020745853705379107,
+          "per_run": [
+            0.5599999999999999,
+            0.5384615384615384,
+            0.5185185185185186
+          ]
+        }
+      }
+    },
+    "error_propagation": {
+      "missed_in_identification": {
+        "mean": 58.333333333333336,
+        "std": 2.0816659994661326,
+        "per_run": [
+          59.0,
+          60.0,
+          56.0
+        ]
+      },
+      "false_positive_count": {
+        "mean": 11.0,
+        "std": 0.0,
+        "per_run": [
+          11.0,
+          11.0,
+          11.0
+        ]
+      },
+      "unclassified_after_identification": {
+        "mean": 0.0,
+        "std": 0.0,
+        "per_run": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "classification_errors_after_correct_identification": {
+        "mean": 21.666666666666668,
+        "std": 0.5773502691896258,
+        "per_run": [
+          21.0,
+          22.0,
+          22.0
+        ]
+      }
+    },
+    "sum_confusion_matrix": {
+      "security": {
+        "security": 138,
+        "F": 0,
+        "performance": 0,
+        "other": 0,
+        "_missed": 45,
+        "maintainability": 0
+      },
+      "F": {
+        "security": 15,
+        "F": 0,
+        "performance": 0,
+        "other": 17,
+        "_missed": 0,
+        "maintainability": 1
+      },
+      "performance": {
+        "security": 3,
+        "F": 0,
+        "performance": 134,
+        "other": 0,
+        "_missed": 7,
+        "maintainability": 3
+      },
+      "other": {
+        "security": 6,
+        "F": 0,
+        "performance": 30,
+        "other": 412,
+        "_missed": 114,
+        "maintainability": 17
+      },
+      "_missed": {
+        "security": 0,
+        "F": 0,
+        "performance": 0,
+        "other": 0,
+        "_missed": 0,
+        "maintainability": 0
+      },
+      "maintainability": {
+        "security": 0,
+        "F": 0,
+        "performance": 0,
+        "other": 6,
+        "_missed": 9,
+        "maintainability": 21
+      }
+    },
+    "mean_confusion_matrix": {
+      "security": {
+        "security": 46.0,
+        "F": 0.0,
+        "performance": 0.0,
+        "other": 0.0,
+        "_missed": 15.0,
+        "maintainability": 0.0
+      },
+      "F": {
+        "security": 5.0,
+        "F": 0.0,
+        "performance": 0.0,
+        "other": 5.666666666666667,
+        "_missed": 0.0,
+        "maintainability": 0.3333333333333333
+      },
+      "performance": {
+        "security": 1.0,
+        "F": 0.0,
+        "performance": 44.666666666666664,
+        "other": 0.0,
+        "_missed": 2.3333333333333335,
+        "maintainability": 1.0
+      },
+      "other": {
+        "security": 2.0,
+        "F": 0.0,
+        "performance": 10.0,
+        "other": 137.33333333333334,
+        "_missed": 38.0,
+        "maintainability": 5.666666666666667
+      },
+      "_missed": {
+        "security": 0.0,
+        "F": 0.0,
+        "performance": 0.0,
+        "other": 0.0,
+        "_missed": 0.0,
+        "maintainability": 0.0
+      },
+      "maintainability": {
+        "security": 0.0,
+        "F": 0.0,
+        "performance": 0.0,
+        "other": 2.0,
+        "_missed": 3.0,
+        "maintainability": 7.0
+      }
+    }
+  }
+}

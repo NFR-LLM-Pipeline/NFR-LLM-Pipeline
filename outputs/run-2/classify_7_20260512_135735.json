@@ -1,0 +1,102 @@
+{
+  "step": "classify",
+  "project_id": "7",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "security": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "maintainability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 2,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 2,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "other": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 4
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 4,
+      "true_other_count": 4,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {}
+    },
+    "n_samples": 8,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R351",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R352",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R353",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R354",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R355",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R356",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R357",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R358",
+        "predicted_category": "other"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+You are a software requirements analyst.
+You are given a list of software requirements with their IDs.
+
+Your task is to identify which of the following software requirements are non-functional requirements (NFRs).
+
+Definition:
+
+Functional requirements describe what the system should do, such as features, behaviors, user actions, data operations, or business rules.
+Non-functional requirements describe how the system should be, perform, operate, or be constrained. They include quality attributes, system properties, technical constraints, environmental constraints, and operational constraints.
+
+Non-functional requirements include, but are not limited to:
+
+Performance, such as response time, throughput, scalability, capacity, concurrency, or resource usage.
+Security, such as access control, authentication, authorization, data protection, integrity, or protection against malicious input.
+Maintainability, such as modifiability, configurability, extensibility, code quality, ease of updates, or system evolution.
+Usability, such as ease of use, accessibility, learnability, user experience, or user-interface quality expectations.
+Reliability, availability, robustness, or fault tolerance.
+Compatibility, portability, interoperability, supported platforms, supported environments, or technology constraints.
+
+Important guidelines:
+
+Requirements describing constraints on supported environments, platforms, technologies, compatibility, portability, or interoperability should be considered NFRs.
+Requirements about system qualities, system properties, user experience, reliability, availability, or operational constraints should be considered NFRs.
+Requirements that only describe a concrete system function, user action, data operation, or business rule should be considered FRs.
+If a requirement could reasonably be interpreted as either FR or NFR, classify it based on its primary concern. A behavior, feature, user action, or data operation should be classified as FR. A quality attribute, system property, or explicit constraint should be classified as NFR.
+Do not classify a requirement as NFR only because it is vague or difficult to understand.
+
+Instructions:
+For each requirement, output exactly one line in the format:
+REQ_ID: NFR
+or
+REQ_ID: FR
+Use only the original requirement IDs from the input.
+Do not include explanations, summaries, or any extra text.
+Do not change the format or add punctuation.
+
+Output format (STRICT):
+R1: NFR
+R2: FR
+R3: NFR
+...
+
+Requirements:
+$requirements

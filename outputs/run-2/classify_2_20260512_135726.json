@@ -1,0 +1,188 @@
+{
+  "step": "classify",
+  "project_id": "2",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571
+      },
+      "security": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "maintainability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 6,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 3,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "other": {
+        "performance": 2,
+        "security": 0,
+        "maintainability": 0,
+        "other": 18
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 18,
+      "true_other_count": 20,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {
+        "performance": 2
+      }
+    },
+    "n_samples": 29,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R29",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R30",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R31",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R32",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R33",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R34",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R35",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R36",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R37",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R38",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R39",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R40",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R41",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R42",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R43",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R44",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R45",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R46",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R47",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R48",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R49",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R50",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R51",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R52",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R53",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R54",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R55",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R56",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R57",
+        "predicted_category": "security"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

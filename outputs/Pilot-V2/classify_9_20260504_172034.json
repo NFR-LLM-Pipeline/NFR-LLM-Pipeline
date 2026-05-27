@@ -1,0 +1,102 @@
+{
+  "step": "classify",
+  "project_id": "9",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "security": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "maintainability": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 4,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 1,
+        "other": 0
+      },
+      "other": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 3
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 3,
+      "true_other_count": 3,
+      "target_confused_as_other": {},
+      "other_confused_as_target": {}
+    },
+    "n_samples": 8,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R467",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R468",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R469",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R470",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R471",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R472",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R473",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R474",
+        "predicted_category": "maintainability"
+      }
+    ]
+  },
+  "is_pilot": true,
+  "variant_info": {
+    "prompt_variant": "V2",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}

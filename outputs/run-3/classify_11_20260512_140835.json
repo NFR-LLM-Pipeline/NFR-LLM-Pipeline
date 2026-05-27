@@ -1,0 +1,124 @@
+{
+  "step": "classify",
+  "project_id": "11",
+  "evaluation": {
+    "metrics": {
+      "performance": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "security": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "maintainability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "performance": {
+        "performance": 3,
+        "security": 0,
+        "maintainability": 0,
+        "other": 0
+      },
+      "security": {
+        "performance": 0,
+        "security": 3,
+        "maintainability": 0,
+        "other": 0
+      },
+      "maintainability": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 1
+      },
+      "other": {
+        "performance": 0,
+        "security": 0,
+        "maintainability": 0,
+        "other": 6
+      }
+    },
+    "other_analysis": {
+      "predicted_other_count": 7,
+      "true_other_count": 6,
+      "target_confused_as_other": {
+        "maintainability": 1
+      },
+      "other_confused_as_target": {}
+    },
+    "n_samples": 13,
+    "missing_responses": 0,
+    "missing_ids": []
+  },
+  "predictions": {
+    "classification": [
+      {
+        "req_id": "R544",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R545",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R546",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R547",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R548",
+        "predicted_category": "performance"
+      },
+      {
+        "req_id": "R549",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R550",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R551",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R552",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R553",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R554",
+        "predicted_category": "security"
+      },
+      {
+        "req_id": "R555",
+        "predicted_category": "other"
+      },
+      {
+        "req_id": "R556",
+        "predicted_category": "other"
+      }
+    ]
+  },
+  "is_pilot": false,
+  "variant_info": {
+    "prompt_variant": "V3",
+    "pilot_ids": [
+      "6",
+      "9"
+    ]
+  }
+}
