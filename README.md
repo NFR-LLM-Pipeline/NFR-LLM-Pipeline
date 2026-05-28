@@ -1,133 +1,120 @@
 # NFR-LLM Pipeline
 
-## Pipeline Overview
+## What is this repository for?
 
-The code implements a two-step LLM pipeline for PROMISE dataset requirements.
+This repository contains a two-step GPT-4.1 pipeline for non-functional requirement (NFR) identification and classification using the PROMISE NFR dataset.
 
-1. **Identification step**
-   - All requirements for a given project are sent to the model in one prompt.
-   - The model predicts whether each requirement is a functional requirement (`FR`) or a non-functional requirement (`NFR`).
-   - This step is evaluated independently with precision/recall/F1 for `NFR` vs `FR`.
+The pipeline performs the following tasks:
 
-2. **Classification step**
-   - Only the requirements identified as NFRs are sent back to the model.
-   - The model assigns one of: `performance`, `security`, `maintainability`, or `other`.
-   - Classification is evaluated in two ways:
-     - Directly on gold NFRs to measure classification performance independently of identification errors.
-     - End-to-end through the full pipeline, where only identified NFRs are classified.
+1. Identifies requirements as either:
 
-## Prompting strategy
+   * Functional Requirements (FR)
+   * Non-Functional Requirements (NFR)
 
-- The pipeline uses zero-shot prompting in both steps.
-- In the identification step, the model receives all requirements for a single project and is instructed to label each statement as `FR` or `NFR`.
-- In the classification step, only the requirements identified as NFRs are sent back to the model and the model is instructed to label each one as `performance`, `security`, `maintainability`, or `other`.
-- No labeled requirement examples are provided in the prompts; only output formatting guidance is included.
-- Prompt templates are defined in `prompts/identify.txt` and `prompts/classify.txt`.
-- Prompt variants can be controlled via `--prompt-variant` for sensitivity analysis.
+2. Classifies NFRs into the following categories:
 
-## Prompt development and pilot phase
+   * performance
+   * security
+   * maintainability
+   * other
 
-Prompt templates are intended to be developed during a pilot phase using 2–3 projects from the dataset. Pilot project IDs and prompt changes should be documented separately in the thesis appendix. Results should be reported both with and without pilot-based prompt refinement to assess any bias introduced by prompt optimization.
+The pipeline is evaluated in three configurations:
 
-Use the `--pilot-ids` flag to tag specific projects as pilot in the result metadata. Every result JSON will contain an `is_pilot: true/false` field and the full pilot set in `variant_info.pilot_ids`.
+* **Identification evaluation**
+  FR vs NFR classification
 
-```bash
-# Run identification on projects 1 and 2, tagged as pilot projects
-python -m src.experiments --step identify --data data/nfr.csv --projects 1 2 --pilot-ids 1 2
+* **Classification evaluation (gold NFRs)**
+  Classification performance on ground-truth NFR statements only
 
-# Full pipeline run across all projects, with projects 1 and 2 tagged as pilot
-python -m src.experiments --step pipeline --data data/nfr.csv --pilot-ids 1 2
-```
+* **End-to-end evaluation**
+  Full pipeline evaluation where only predicted NFRs are classified
 
-## Reproducibility
+The repository also includes evaluation scripts, prompts, experiment outputs, and a Streamlit dashboard.
 
-The repository is structured to support reproducibility:
+---
 
-- Prompt texts are stored in external files under `prompts/`.
-- LLM inputs and outputs are logged to `outputs/raw_responses/` by `src/llm_runner.py`.
-- The model configuration is deterministic by default (`temperature=0.0`).
-- Evaluation is separated by step: identification, classification on gold NFRs, and full end-to-end pipeline.
-- The parser in `src/parser.py` only accepts explicit structured outputs or strict line formats, and raises a parse error for malformed model responses.
-- Partial parsing is not allowed; any invalid line or unrecognized label causes the response to be rejected.
-- Experiment metadata records `prompt_variant` and `project_id` for reproducible reruns.
+## How do I get set up?
 
-## Running experiments
+### Prerequisites
 
-Example commands:
+* Python 3.10+
+* OpenAI API key
 
-```bash
-python -m src.experiments --step identify --data data/nfr.csv
-python -m src.experiments --step classify --data data/nfr.csv
-python -m src.experiments --step pipeline --data data/nfr.csv
-```
+### Setup
 
-To use a variant prompt:
-
-```bash
-python -m src.experiments --step pipeline --data data/nfr.csv --prompt-variant alt1
-```
-
-## Setup
-
-- Create and activate a Python virtual environment (recommended):
+Clone the repository and create a virtual environment:
 
 ```bash
 python -m venv .venv
+```
+
+Activate the virtual environment:
+
+```bash
 # Windows
 .\.venv\Scripts\activate
+
 # macOS / Linux
 source .venv/bin/activate
 ```
 
-- Install dependencies:
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-- Run tests:
+Create a `.env` file in the project root directory:
 
-```bash
-python -m pytest
+```env
+OPENAI_API_KEY=your_api_key_here
 ```
 
-## CLI Usage
+---
 
-- The main experiment runner is `src.experiments` and supports three steps:
+## Running experiments
+
+### Identification only
 
 ```bash
 python -m src.experiments --step identify --data data/nfr.csv
+```
+
+### Classification on gold NFRs
+
+```bash
 python -m src.experiments --step classify --data data/nfr.csv
+```
+
+### Full end-to-end pipeline
+
+```bash
 python -m src.experiments --step pipeline --data data/nfr.csv
 ```
 
-- Optional flags:
-   - `--prompt-variant <name>` - select an alternate prompt template variant stored in `prompts/`.
-   - `--pilot-ids <id>` - tag the listed project IDs as pilot projects in result metadata.
+---
 
-- Quick example: run the full pipeline with an alternate prompt
+## Prompt variants
+
+Alternative prompts can be selected using:
 
 ```bash
-python -m src.experiments --step pipeline --data data/nfr.csv --prompt-variant alt1
+python -m src.experiments \
+  --step pipeline \
+  --data data/nfr.csv \
+  --prompt-variant <name>`
 ```
 
+Prompt templates are located in prompts folder.
 
-## Evaluation
+## Running the dashboard
 
-The evaluation code is in `src/evaluation.py` and supports:
-- `evaluate_identification(...)`
-- `evaluate_classification(...)`
-- `evaluate_end_to_end(...)`
+Launch the Streamlit dashboard with:
 
-Metrics include precision, recall, F1, confusion matrices, and analysis of the residual `other` class.
+```bash
+streamlit run dashboard.py
+```
 
-## Test coverage
-
-Unit tests currently cover:
-- parser behavior in `tests/test_parser.py`
-- prompt loading and rendering in `tests/test_prompts.py`
-- pipeline error counting in `tests/test_pipeline.py`
-- metric calculations in `tests/test_metrics.py`
 
 ## Dataset
 
@@ -137,11 +124,6 @@ Jane Cleland-Huang, Sepideh Mazrouee, Huang Liguoand Dan Port, “nfr”. Zenodo
 Original dataset license: CC BY 4.0.
 The dataset has only been reformatted for use in this study.
 
-## Streamlit Dashboard
-
-```bash
-streamlit run dashboard.py
-```
 
 ## Project Structure
 
